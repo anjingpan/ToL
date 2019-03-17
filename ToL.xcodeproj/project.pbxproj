@@ -13,6 +13,10 @@
 		95BB0A24223E04D00074E560 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95BB0A22223E04D00074E560 /* Main.storyboard */; };
 		95BB0A30223E04D10074E560 /* ToLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BB0A2F223E04D10074E560 /* ToLTests.swift */; };
 		95BB0A3B223E04D10074E560 /* ToLUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BB0A3A223E04D10074E560 /* ToLUITests.swift */; };
+		95BB0A49223E77C70074E560 /* countDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BB0A48223E77C70074E560 /* countDownView.swift */; };
+		95BB0A4B223E9D300074E560 /* TimeInterval+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BB0A4A223E9D300074E560 /* TimeInterval+String.swift */; };
+		95BB0A4D223EAE690074E560 /* taskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BB0A4C223EAE690074E560 /* taskModel.swift */; };
+		95BB0A4F223EB0DA0074E560 /* taskTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BB0A4E223EB0DA0074E560 /* taskTableCellView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +50,10 @@
 		95BB0A36223E04D10074E560 /* ToLUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToLUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		95BB0A3A223E04D10074E560 /* ToLUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToLUITests.swift; sourceTree = "<group>"; };
 		95BB0A3C223E04D10074E560 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95BB0A48223E77C70074E560 /* countDownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = countDownView.swift; sourceTree = "<group>"; };
+		95BB0A4A223E9D300074E560 /* TimeInterval+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+String.swift"; sourceTree = "<group>"; };
+		95BB0A4C223EAE690074E560 /* taskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = taskModel.swift; sourceTree = "<group>"; };
+		95BB0A4E223EB0DA0074E560 /* taskTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = taskTableCellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +106,10 @@
 			children = (
 				95BB0A1C223E04CF0074E560 /* AppDelegate.swift */,
 				95BB0A1E223E04CF0074E560 /* ViewController.swift */,
+				95BB0A48223E77C70074E560 /* countDownView.swift */,
+				95BB0A4A223E9D300074E560 /* TimeInterval+String.swift */,
+				95BB0A4E223EB0DA0074E560 /* taskTableCellView.swift */,
+				95BB0A4C223EAE690074E560 /* taskModel.swift */,
 				95BB0A20223E04D00074E560 /* Assets.xcassets */,
 				95BB0A22223E04D00074E560 /* Main.storyboard */,
 				95BB0A25223E04D00074E560 /* Info.plist */,
@@ -254,7 +266,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95BB0A4D223EAE690074E560 /* taskModel.swift in Sources */,
 				95BB0A1F223E04CF0074E560 /* ViewController.swift in Sources */,
+				95BB0A4F223EB0DA0074E560 /* taskTableCellView.swift in Sources */,
+				95BB0A49223E77C70074E560 /* countDownView.swift in Sources */,
+				95BB0A4B223E9D300074E560 /* TimeInterval+String.swift in Sources */,
 				95BB0A1D223E04CF0074E560 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -430,6 +446,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.anjing.ToL;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -449,6 +466,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.anjing.ToL;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
