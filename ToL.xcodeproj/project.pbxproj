@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		79AF679A223F382200C92DA1 /* cacheManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AF6799223F382200C92DA1 /* cacheManage.swift */; };
 		95BB0A1D223E04CF0074E560 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BB0A1C223E04CF0074E560 /* AppDelegate.swift */; };
 		95BB0A1F223E04CF0074E560 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BB0A1E223E04CF0074E560 /* ViewController.swift */; };
 		95BB0A21223E04D00074E560 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95BB0A20223E04D00074E560 /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		79AF6799223F382200C92DA1 /* cacheManage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cacheManage.swift; sourceTree = "<group>"; };
 		95BB0A19223E04CF0074E560 /* ToL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95BB0A1C223E04CF0074E560 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95BB0A1E223E04CF0074E560 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -85,8 +87,8 @@
 			isa = PBXGroup;
 			children = (
 				95BB0A1B223E04CF0074E560 /* ToL */,
-				95BB0A2E223E04D10074E560 /* ToLTests */,
 				95BB0A39223E04D10074E560 /* ToLUITests */,
+				95BB0A2E223E04D10074E560 /* ToLTests */,
 				95BB0A1A223E04CF0074E560 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -109,6 +111,7 @@
 				95BB0A48223E77C70074E560 /* countDownView.swift */,
 				95BB0A4A223E9D300074E560 /* TimeInterval+String.swift */,
 				95BB0A4E223EB0DA0074E560 /* taskTableCellView.swift */,
+				79AF6799223F382200C92DA1 /* cacheManage.swift */,
 				95BB0A4C223EAE690074E560 /* taskModel.swift */,
 				95BB0A20223E04D00074E560 /* Assets.xcassets */,
 				95BB0A22223E04D00074E560 /* Main.storyboard */,
@@ -269,6 +272,7 @@
 				95BB0A4D223EAE690074E560 /* taskModel.swift in Sources */,
 				95BB0A1F223E04CF0074E560 /* ViewController.swift in Sources */,
 				95BB0A4F223EB0DA0074E560 /* taskTableCellView.swift in Sources */,
+				79AF679A223F382200C92DA1 /* cacheManage.swift in Sources */,
 				95BB0A49223E77C70074E560 /* countDownView.swift in Sources */,
 				95BB0A4B223E9D300074E560 /* TimeInterval+String.swift in Sources */,
 				95BB0A1D223E04CF0074E560 /* AppDelegate.swift in Sources */,

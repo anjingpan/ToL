@@ -14,22 +14,31 @@ extension TimeInterval {
         
         var count = Int(timeInterval)
         
-        if count / 3600 > 1 {
-            result += "\(count / 3600):"
+        if count / 3600 >= 1 {
+            result += showTwoDigits(count / 3600)
+            result += ":"
             count = count % 60
         }else {
             result += "00:"
         }
-        if count / 60 > 1 {
-            result += "\(count / 60):"
+        if count / 60 >= 1 {
+            result += showTwoDigits(count / 60)
+            result += ":"
             count = count % 60
         }else {
             result += "00:"
         }
         
-        result += count < 10 ? "0" : ""
-        result += "\(count)"
+        result += showTwoDigits(count)
         
+        return result
+    }
+    
+    //return 格式 00
+    static fileprivate func showTwoDigits(_ number: Int) -> String {
+        var result = ""
+        result += number < 10 ? "0" : ""
+        result += "\(number)"
         return result
     }
 }

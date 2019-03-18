@@ -32,6 +32,8 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        taskArray = cacheManage.sharedInstance.getTaskArray()
+        
         countDown.delegete = self
         
         addAction()
@@ -56,8 +58,8 @@ class ViewController: NSViewController {
         if sender == startButton {
             //默认：时间为30分钟，任务描述为日常学习
             let taskTimeString = taskTimeTextField.stringValue == "" ? "30" : taskTimeTextField.stringValue
-            guard let totalTime = TimeInterval(taskTimeString) else {showWarning("请正确输入时间"); return}
-            guard !isCounting else { showWarning("正在进行任务，无法开启新任务"); return }
+            guard let totalTime = TimeInterval(taskTimeString) else {showWarning("请正确输入时间", .warning); return}
+            guard !isCounting else { showWarning("正在进行任务，无法开启新任务", .warning); return }
             currentTaskName = taskNameTextField.stringValue == "" ? "日常学习" : taskNameTextField.stringValue
             countDown.totalTime = totalTime * 60
             countDown.startCount()
@@ -80,11 +82,11 @@ class ViewController: NSViewController {
     }
     
     // MARK: - Alert
-    func showWarning(_ warningMessage: String) {
+    func showWarning(_ message: String, _ style: NSAlert.Style) {
         let alert = NSAlert()
-        alert.messageText = warningMessage
+        alert.messageText = message
         alert.addButton(withTitle: "确定")
-        alert.alertStyle = .warning
+        alert.alertStyle = style
         alert.runModal()
     }
     
@@ -102,6 +104,7 @@ class ViewController: NSViewController {
         }
         
         taskArray?.append(task)
+        cacheManage.sharedInstance.savaTaskArray(taskArray!)
         tableView.reloadData()
     }
 
@@ -135,6 +138,7 @@ extension ViewController : CountDownTimerDelegate {
     func timerDidFinish() {
         endTime = Date()
         isCounting = false
+        showWarning("恭喜你完成任务：" + currentTaskName , .informational)
         let task = taskModel(start: startTime, end: endTime, name: currentTaskName, isCom: true)
         reloadAppendTaskList(task)
     }
